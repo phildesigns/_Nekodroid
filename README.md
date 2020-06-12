@@ -1,4 +1,4 @@
-[](https://images.discordapp.net/avatars/612387247207219220/e3df57d52eb337159c497eb193bcc97a.png?size=512)
+<img src="https://images.discordapp.net/avatars/612387247207219220/e3df57d52eb337159c497eb193bcc97a.png"></img>)
 
 # Simple but efficient
 
