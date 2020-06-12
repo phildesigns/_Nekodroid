@@ -17,3 +17,8 @@ You can add the 24/7 running Discord bot [here](https://discord.com/login?redire
 You can visit our [Discord support server](https://discord.gg/wxBGu5f), as well as our [Discord Bots List page](https://discordbots.org/bot/612387247207219220) to drop an upvote and support us.
 
 If you're a developer as well, feel free to open pull requests and fork the code.
+
+# Credits & contributors
+
+- [Miowski](https://github.com/miowski) *original work*
+- [Yume](https://github.com/yumenetwork) *optimisation & fixes*
