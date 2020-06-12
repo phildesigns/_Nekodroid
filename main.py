@@ -1,17 +1,5 @@
-import asyncio
-import json
-import logging
-import os
-import sys
-
-try:
-    import discord
-    from discord.ext import commands
-
-    print('All modules successfully imported.')
-except ImportError:
-    print('Importing librairies failed. Some of the librairies may be missing or corrupted')
-    sys.exit()
+import asyncio, json, logging, os, sys, discord
+from discord.ext import commands
 
 with open('./config.json', 'r') as cjson:
     config = json.load(cjson)
@@ -41,7 +29,7 @@ async def status():
 
 @bot.event
 async def on_connect():
-    print('Successfully connected !')
+    print('Now connected to the Discord API.')
 
 
 @bot.event
