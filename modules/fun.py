@@ -1,6 +1,6 @@
 import asyncio
+import random
 from random import randint
-
 import aiohttp
 import discord
 import nekos
