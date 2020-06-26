@@ -107,13 +107,7 @@ class Fun(commands.Cog):
         
     @commands.command(aliases=['8ball', '8'])
     async def _8ball(self, ctx, *, question):
-        responses = [
-            "Yes.",
-            "No.",
-            "Without a doubt.",
-            "Sure.",
-            "Maybe."
-            "I dont think so."]
+        responses = ["Yes.", "No.", "Without a doubt.", "Sure.", "Maybe.", "I dont think so."]
         await ctx.send(f'**Question :** {question}\n**Neko says :** {random.choice(responses)}')
 
 def setup(bot):
