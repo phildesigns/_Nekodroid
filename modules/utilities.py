@@ -55,19 +55,19 @@ class Utilities(commands.Cog):
         e.set_thumbnail(url=emote.url)
         await ctx.send(embed=e)
         
-        @bot.command(aliases=['minisondage', 'Sondage', 'ms'])
-async def sondage(ctx):
-	await ctx.send("Que voulez vous écrire ?")
+    @bot.command()
+    async def poll(self, ctx):
+	    await ctx.send("What will this poll be about ?")
 
 	def checkMessage(message):
-		return message.author == ctx.message.author and ctx.message.channel == message.channel
+        return message.author == ctx.message.author and ctx.message.channel == message.channel
 
 	try:
 		recette = await bot.wait_for("message", timeout = 60, check = checkMessage)
 	except:
-		await ctx.send("Veuillez réitérer la commande.")
+		await ctx.send("❌ | Command timed out, please retry.")
 		return
-	message = await ctx.send(f"`{ctx.author.name} a fait un sondage :`\n**{recette.content}**")
+	message = await ctx.send(f"`{ctx.author.name} started a poll :`\n> **{recette.content}**")
 	await message.add_reaction("✅")
 	await message.add_reaction("❌")
 
