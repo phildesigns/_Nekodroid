@@ -105,8 +105,8 @@ class Fun(commands.Cog):
             e.add_field(name='Coin flip', value='Head!')
         await ctx.send(embed=e)
         
-    @commands.command(aliases=['8ball','8','8Ball'])
-    async def _8ball(ctx, *, question):
+    @commands.command(aliases=['8ball', '8'])
+    async def _8ball(self, ctx, *, question):
         responses = [
             "Yes.",
             "No.",
