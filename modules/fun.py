@@ -104,6 +104,17 @@ class Fun(commands.Cog):
         else:
             e.add_field(name='Coin flip', value='Head!')
         await ctx.send(embed=e)
+        
+    @commands.command(aliases=['8ball','8','8Ball'])
+    async def _8ball(ctx, *, question):
+        responses = [
+            "Yes.",
+            "No.",
+            "Without a doubt.",
+            "Sure.",
+            "Maybe."
+            "I dont think so."]
+        await ctx.send(f'**Question :** {question}\n**Neko says :** {random.choice(responses)}')
 
 def setup(bot):
     bot.add_cog(Fun(bot))
