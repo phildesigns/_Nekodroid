@@ -62,7 +62,7 @@ class Utilities(commands.Cog):
             return message.author == ctx.message.author and ctx.message.channel == message.channel
 
         try:
-            recette = await bot.wait_for("message", timeout = 60, check = checkMessage)
+            recette = await self.bot.wait_for("message", timeout = 60, check = checkMessage)
         except:
             await ctx.send("❌ | Command timed out, please retry.")
             return
