@@ -59,7 +59,7 @@ class Utilities(commands.Cog):
         await ctx.send("What will this poll be about ?")
 
         def checkMessage(message):
-        return message.author == ctx.message.author and ctx.message.channel == message.channel
+            return message.author == ctx.message.author and ctx.message.channel == message.channel
 
         try:
             recette = await bot.wait_for("message", timeout = 60, check = checkMessage)
