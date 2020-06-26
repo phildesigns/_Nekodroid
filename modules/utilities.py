@@ -54,7 +54,7 @@ class Utilities(commands.Cog):
         e.set_thumbnail(url=emote.url)
         await ctx.send(embed=e)
         
-    bot.command()
+    @commands.command()
     async def poll(self, ctx):
         await ctx.send("What will this poll be about ?")
 
