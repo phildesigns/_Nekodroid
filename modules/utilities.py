@@ -57,7 +57,7 @@ class Utilities(commands.Cog):
         
     @bot.command()
     async def poll(self, ctx):
-	    await ctx.send("What will this poll be about ?")
+	await ctx.send("What will this poll be about ?")
 
 	def checkMessage(message):
         return message.author == ctx.message.author and ctx.message.channel == message.channel
