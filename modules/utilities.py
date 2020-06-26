@@ -10,7 +10,6 @@ translator = Translator()
 BITLY_API_USER = os.environ["BITLYUSERNAME"]
 BITLY_API_KEY = os.environ["BITLYTOKEN"]
 
-
 class Utilities(commands.Cog):
 
     def __init__(self, bot):
@@ -55,21 +54,21 @@ class Utilities(commands.Cog):
         e.set_thumbnail(url=emote.url)
         await ctx.send(embed=e)
         
-    @bot.command()
+    bot.command()
     async def poll(self, ctx):
-	await ctx.send("What will this poll be about ?")
+        await ctx.send("What will this poll be about ?")
 
-	def checkMessage(message):
+        def checkMessage(message):
         return message.author == ctx.message.author and ctx.message.channel == message.channel
 
-	try:
-		recette = await bot.wait_for("message", timeout = 60, check = checkMessage)
-	except:
-		await ctx.send("❌ | Command timed out, please retry.")
-		return
-	message = await ctx.send(f"`{ctx.author.name} started a poll :`\n> **{recette.content}**")
-	await message.add_reaction("✅")
-	await message.add_reaction("❌")
+        try:
+            recette = await bot.wait_for("message", timeout = 60, check = checkMessage)
+        except:
+            await ctx.send("❌ | Command timed out, please retry.")
+            return
+        message = await ctx.send(f"`{ctx.author.name} started a poll :`\n> **{recette.content}**")
+        await message.add_reaction("✅")
+        await message.add_reaction("❌")
 
 
 def setup(bot):
