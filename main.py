@@ -12,7 +12,10 @@ OWNER = config["owner_id"]
 VERSION = config["version"]
 TOKEN = os.environ["TOKEN"]
 
-bot = commands.Bot(command_prefix=[PREFIX, "nya ", "Nya ", "Nya!"])
+intents = discord.Intents.default()
+intents.members = True
+
+bot = commands.Bot(command_prefix=[PREFIX, "nya ", "Nya ", "Nya!"], intents=intents)
 
 bot.config = config
 bot.ready = False
